@@ -85,7 +85,7 @@ assetLoader.load('./Asset/Cow.gltf', function (gltf) {
     cow = model;
     model.receiveShadow = true;
     model.castShadow = true;
-    console.log(cow.material);
+    // console.log(cow.material);
 
     mixer = new THREE.AnimationMixer(model);
     const clips = gltf.animations;
@@ -147,7 +147,7 @@ window.addEventListener('mousedown', function (e) {
 
 
     const cowClone = SkeletonUtils.clone(cow);
-
+    scene.add(cowClone);
 
     world.addBody(cowBody);
     cowBody.angularVelocity.set(0, 10, 0);
@@ -201,7 +201,7 @@ function animate() {
     if(mixer)
         mixer.update(clock.getDelta());
     renderer.render(scene, camera);
-    
+
     spotLight.angle = options.angle;
     spotLight.penumbra = options.penumbra;
     spotLight.intensity = options.intensity;
