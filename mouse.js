@@ -145,7 +145,7 @@ window.addEventListener('mousedown', function (e) {
 
     world.addContactMaterial(groundCowContactMat);
 
-
+//adding cloned Cow to the scene
     const cowClone = SkeletonUtils.clone(cow);
     scene.add(cowClone);
 
