@@ -139,8 +139,8 @@ window.addEventListener('mousedown', function (e) {
     const groundCowContactMat = new CANNON.ContactMaterial(
         groundPhyMat,
         cowPhyMat,
-        {friction: 0},
-        // {restitution: 0.8}
+//         {friction: 0},
+        {restitution: 0.95}
     );
 
     world.addContactMaterial(groundCowContactMat);
